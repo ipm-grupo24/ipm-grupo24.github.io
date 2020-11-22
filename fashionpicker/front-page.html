@@ -6,10 +6,12 @@
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+        </style>
         <link rel="stylesheet" type="text/css" href="header.css">
         <link rel="stylesheet" type="text/css" href="footer.css">
-        <link rel="stylesheet" type="text/css" href="modals.css">
+        <link rel="stylesheet" type="text/css" href="scss-css/style.css">
     </head>
 
     <body>
@@ -29,7 +31,7 @@
 
             <div id="afterStarted" class="after-start-buttons" style="display:none;">
                 <div class="log-in-button">
-                    <input class="buttons" type="button" id="signup" value="Log In" onclick="login()"> 
+                    <input class="buttons" type="button" id="login-b" value="Log In" onclick="login()"> 
                 </div>
 
                 <div class="sign-up-button">
@@ -41,7 +43,7 @@
                 <form>
                     <input type="text" id="emailL" placeholder="Email"> <br>
                     <input type="password" id="passwordL" placeholder="Password"> <br>
-                    <input type="submit" id="signin" value="Log In" onclick="doLogin(event, emailL.value, passwordL.value)">    
+                    <input type="submit" id="login-b" value="Log In" onclick="doLogin(event, emailL.value, passwordL.value)">    
                 </form> 
             </div>
                 

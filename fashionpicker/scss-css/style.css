@@ -1,0 +1,62 @@
+main {
+  max-width: 100%;
+  margin: 0 auto;
+  width: 100%;
+  color: #47525E;
+  text-align: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+main .front-logo img {
+  max-height: 400px;
+  width: auto;
+  height: 40vw;
+}
+
+main .start-button .pitch {
+  margin-bottom: 50px;
+}
+
+main .start-button .pitch h4 {
+  font-size: 28px;
+}
+
+main .start-button input,
+main #login-b {
+  background-color: #E98FAF;
+  border-radius: 5px;
+  width: 283px;
+  height: 74px;
+  border-color: transparent;
+  font-size: 23px;
+  color: white;
+  margin-bottom: 25px;
+}
+
+main #signup {
+  background-color: #CC4B4B;
+  border-radius: 5px;
+  width: 283px;
+  height: 74px;
+  color: white;
+  font-size: 23px;
+  border-color: transparent;
+}
+
+main #register form input,
+main #login form input {
+  margin-bottom: 30px;
+}
+
+main #register form input:not(:last-child),
+main #login form input:not(:last-child) {
+  background-color: #FFFFFF;
+  border: 1px solid #8492A6;
+  border-radius: 5px;
+  width: 204px;
+  height: 41px;
+  font-size: 22px;
+  padding-left: 10px;
+}
+/*# sourceMappingURL=style.css.map */
