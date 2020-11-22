@@ -2,8 +2,6 @@ var username, email, password;
 
 function getStarted() {
   $("#getStarted").hide();
-  $("#login").hide();
-  $("#register").hide();
   $("#afterStarted").show();
 }
 
@@ -21,8 +19,9 @@ function doLogin(event, e, p) {
   event.preventDefault();
 
   if(email == e && password == p) {
-    swal("welcome!", "You logged in successfuly!", "success");
+    swal("Welcome!", "You logged in successfuly!", "success");
     $("#login").hide();
+    window.location = "./feed";
   }
   else swal("Oops!", "Your login failed, please try again.", "error");
 }
