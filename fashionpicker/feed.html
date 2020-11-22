@@ -19,13 +19,18 @@
             <h2>Fashion Picker</h2>
         </div>
         <div class="my-picks-button">
-            <p><img><!-- Meter aqui a imagem depois quando se tiver --></img> My Picks</p>
+            <p><img src="images/me-placeholder.JPG" height="30" width="30"></img> My Page</p>
         </div>
 
         <div class="selection-tabs">
             <div class="designs">
                 <p>Designs</p>
             </div>
+
+            <div class="designs">
+                <p>Top Picks</p>
+            </div>
+
             <div class="collection">
                 <p>Collections</p>
             </div>
@@ -35,6 +40,20 @@
     <main>
         <div class="feed-designs">
             <!-- Vai ser populado pelo javascript... -->
+            <script>
+                var folder = "database";
+    
+                $.ajax({
+                    url : folder,
+                    success: function (data) {
+                        $(data).find("a").attr("href", function (i, val) {
+                            if( val.match(/\.(jpe?g|png)$/) ) { 
+                                $("body").append( "<br> <img src='" + val +"'>" );
+                            } 
+                        });
+                    }
+                });
+            </script>
         </div>
 
         <div class="feed-collections">
