@@ -15,7 +15,7 @@
     <body>
     <main>
 
-        <div class="front-logo">
+        <div class="front-logo" onclick="getStarted()" style="cursor: pointer">
             <img src="images/logo-title.png">
         </div>
 
@@ -39,28 +39,21 @@
         </div>
 
         <div id="login" class="login-fields" style="display:none;">
-            <h4>campos login remover h4 depois</h4>
             <form>
-                <input type="text" id="email" placeholder="Email"> 
-                <input type="password" id="password" placeholder="Password"> 
+                <input type="text" id="email" placeholder="Email"> <br>
+                <input type="password" id="password" placeholder="Password"> <br>
                 <input type="submit" id="signin" value="Log In" onclick="doLogin(event, email.value, password.value)">    
             </form> 
         </div>
             
         <div id="register" class="signup-fields" style="display:none;">
-            <h4>campos signup remover h4 depois</h4>
             <form>
-                <input type="text" id="name" placeholder="Name"> 
-                <input type="text" id="email" placeholder="Email"> 
-                <input type="password" id="password" placeholder="Password"> 
-                <input type="submit" id="signup" value="Sign Up" onclick="doRegister(event, email.value, password.value)">
+                <input type="text" id="username" placeholder="Name"> <br>
+                <input type="text" id="email" placeholder="Email"> <br>
+                <input type="password" id="password" placeholder="Password"> <br>
+                <input type="submit" id="signup" value="Sign Up" onclick="doRegister(event, username.value, email.value, password.value)">
             </form>
         </div>
-
-        <!-- <div id="register-message" class="welcome-message">
-            <h4>Welcome, <br>
-                Your Fashion Picker account has been created successfully.</h4>
-        </div> -->
 
     </main>
 

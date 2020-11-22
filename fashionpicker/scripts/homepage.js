@@ -1,7 +1,9 @@
-var email, password;
+var username, email, password;
 
 function getStarted() {
   $("#getStarted").hide();
+  $("#login").hide();
+  $("#register").hide();
   $("#afterStarted").show();
 }
 
@@ -22,16 +24,17 @@ function doLogin(event, e, p) {
     swal("welcome!", "You logged in successfuly!", "success");
     $("#login").hide();
   }
-  else swal("Oups!", "Your login failed, please try again", "error");
+  else swal("Oops!", "Your login failed, please try again.", "error");
 }
 
-function doRegister(event, e, p) {
+function doRegister(event, n, e, p) {
   event.preventDefault();
 
+  username = n;
   email = e;
   password = p;
 
-  swal("Congratulations!", "You Fashion Picker account was successfully created!", "success");
+  swal("Welcome, " + username + "!", "Your Fashion Picker account was created successfully.", "success");
   $("#register").hide();
   $("#afterStarted").show();
 }
