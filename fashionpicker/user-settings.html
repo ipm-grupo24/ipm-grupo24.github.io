@@ -27,47 +27,33 @@
             <p><img src="images/me-placeholder.JPG" height="20" width="20"></img>
             <b>My page</b>
         </div>
-
-        <div class="account-settings-button">
-            <i class="fa fa-cog"></i>
-        </div>
     </header>
 
-    <side>
-        <div class="selection-tabs">
-            <div class="my-designs">
-                <b>Designs</b> <br>
-                My designs <br>
-                My picks
-            </div>
-
-            <br>
-
-            <div class="my-collection">
-                <b>Collections</b> <br>
-                My collections <br>
-                My picks
-            </div>
-
-            <br>
-        </div>
-    </side>
-
     <main>
-        <div class="user-designs">
-            <!-- Vai ser populado pelo javascript... -->
+        <!-- TODO: Make each div appear/disappear when you click the button to change each field -->
 
-            <div class="new-design">
-                <!-- Adicionar link depois... --><a>+ Add a new design</a>
-            </div>
+        <i class="fa fa-pencil"></i> Change username <br>
+        <div class="change-username">
+            <input type="text" id="username" placeholder="New username"> <br>
         </div>
 
-        <div class="user-collections">
-            <!-- Vai ser populado pelo javascript... -->
-
-            <div class="new-collection">
-              <!-- Adicionar link depois... --><a>+ Create a new collection</a>
-            </div>
+        <i class="fa fa-pencil"></i> Change email <br>
+        <div class="change-email">
+            <input type="text" id="oldEmail" placeholder="Old email"> <br>
+            <input type="text" id="newEmail" placeholder="New email"> <br>
         </div>
+
+        <i class="fa fa-pencil"></i> Change password <br>
+        <div class="change-password">
+            <input type="text" id="oldPass" placeholder="Old password"> <br>
+            <input type="text" id="newPass" placeholder="New password"> <br>
+            <input type="text" id="confirmPass" placeholder="Confirm new password"> <br>
+        </div>
+
+        <i class="fa fa-pencil"></i> Change bio <br>
+        <div class="change-bio">
+            <input type="text" id="bio" placeholder="Bio" height="200"> <br>
+        </div>
+        
     </main>
 </body>
