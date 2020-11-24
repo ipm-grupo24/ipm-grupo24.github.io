@@ -1,12 +1,11 @@
 $(document).ready(function(){
-    $.ajax({
-        url : "database",
-        success: function (data) {
-            $(data).find("a").attr("href", function (i, val) {
-                if(val.match(/\.(jpe?g|png|JPG)$/) ) { 
-                    $("body").append( "<br> <img src='" + val +"'>" );
-                } 
-            });
-        }
-    });
+    for(var counter = 1; counter <= 88; counter++) {
+        var picture = document.createElement("img");
+
+        picture.className = "image-feed";
+        picture.src = "./database/" + counter + ".jpg";
+        picture.style.height = "200px";
+        picture.style.width = "200px";
+        document.body.appendChild(picture);
+    }
 });

@@ -21,7 +21,7 @@ function doLogin(event, e, p) {
   if(email == e && password == p) {
     swal("Welcome!", "You logged in successfuly!", "success");
     $("#login").hide();
-    window.location = "./feed";
+    window.location = "./feed.html";
   }
   else swal("Oops!", "Your login failed, please try again.", "error");
 }
