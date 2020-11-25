@@ -1,11 +1,109 @@
+header {
+  position: relative;
+  padding-top: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header .title h2 {
+  color: #47525E;
+  font-family: Enriqueta;
+  font-size: 70px;
+  line-height: 91px;
+  width: 482px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+header .selection-tabs {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+header .selection-tabs p {
+  color: #47525E;
+  font-family: Lato;
+  font-size: 25px;
+  line-height: 32px;
+}
+
+header .selection-tabs > div {
+  border-bottom: 2px solid #47525E;
+}
+
+header .selection-tabs .designs,
+header .selection-tabs .top-picks {
+  border-right: 2px solid #47525E;
+}
+
+header .my-page-button {
+  position: absolute;
+  right: 30px;
+  top: 57px;
+}
+
+header .my-page-button img {
+  width: 30px;
+  height: auto;
+  margin-top: -7px;
+}
+
+header .my-page-button b {
+  margin-right: 15px;
+  font-size: 22px;
+  color: #8190A5;
+  cursor: pointer;
+  font-family: 'Lato';
+}
+
+header .my-page-button b:hover {
+  color: black;
+}
+
+header .my-page-button i {
+  font-size: 40px;
+  color: #8190A5;
+  cursor: pointer;
+  display: block;
+  float: right;
+  margin-top: -3px;
+}
+
+header .my-page-button i:hover {
+  color: black;
+}
+
 main {
-  max-width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   width: 100%;
   color: #47525E;
   text-align: center;
   height: 100vh;
   overflow: hidden;
+  padding-right: 30px;
+  padding-left: 30px;
+  overflow: auto;
+}
+
+main .feed-designs {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  row-gap: 30px;
+  padding-bottom: 50px;
+}
+
+main .feed-designs img {
+  margin: 0 auto;
 }
 
 main .front-logo img {
