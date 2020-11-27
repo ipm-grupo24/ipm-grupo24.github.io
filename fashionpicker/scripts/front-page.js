@@ -20,12 +20,18 @@ function doLogin(event, e, p) {
 
   if(email == e && password == p) {
     swal("Welcome!", "You logged in successfuly!", "success");
-    $("#login").hide();
-    window.location = "./feed.html";
-  }
-  else swal("Oops!", "Your login failed, please try again.", "error"); 
+    
+    sessionStorage.setItem("username", username);
+    sessionStorage.setItem("email", email);
+    sessionStorage.setItem("password", password);
+    sessionStorage.setItem("bio", "");
+    sessionStorage.setItem("designs", JSON.stringify([]));
+    sessionStorage.setItem("collections", JSON.stringify([]));
+    // <-- if need to store more stuff about the user aka "database" in memory
 
-  // use session storage to save 
+    $("#login").hide();
+    goToFeed();
+  } else swal("Oops!", "Your login failed, please try again.", "error");
 }
 
 function doRegister(event, n, e, p) {

@@ -17,5 +17,5 @@ function loadMyPage() {
 }
 
 function loadSettings() {
-    console.log("Still not implemented..");
+    window.location = "./user-settings.html";
 }
