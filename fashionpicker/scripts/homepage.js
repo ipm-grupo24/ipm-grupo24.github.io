@@ -23,7 +23,9 @@ function doLogin(event, e, p) {
     $("#login").hide();
     window.location = "./feed.html";
   }
-  else swal("Oops!", "Your login failed, please try again.", "error");
+  else swal("Oops!", "Your login failed, please try again.", "error"); 
+
+  // use session storage to save 
 }
 
 function doRegister(event, n, e, p) {

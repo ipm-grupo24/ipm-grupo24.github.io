@@ -11,3 +11,11 @@ $(document).ready(function(){
         $(".feed-designs").append(picture);
     }
 });
+
+function loadMyPage() {
+    window.location = "./user-area.html";
+}
+
+function loadSettings() {
+    console.log("Still not implemented..");
+}
