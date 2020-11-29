@@ -1,29 +1,7 @@
 $(document).ready(function(){
-    for(var counter = 1; counter <= 88; counter++) {   
-        var container = document.createElement("div");
-        var username = document.createElement("p");
-        var picture = document.createElement("img");
-        var button = document.createElement("button");
-
-        container.className = "feed-post";
-        username.className = "feed-username";
-        username.innerHTML = users[counter-1];
-        picture.className = "image-feed";
-        picture.src = "./database/" + counter + ".jpg";
-        picture.style.height = "200px";
-        picture.style.width = "200px";
-        picture.id = counter;
-        picture.addEventListener("click", function() {popDesign(this.id)});
-        button.className = "feed-button";
-        button.innerHTML = "pick";
-        button.id = counter;
-        button.addEventListener("click", function() {pickDesign(this.id)});
-
-        container.appendChild(username);
-        container.appendChild(picture);
-        container.appendChild(button);
-        $(".feed-designs").append(container);
-    }
+    loadDesignsTab();
+    loadTopPicksTab();
+    loadCollectionsTab();
 });
 
 var users = [
@@ -64,16 +42,70 @@ var col10 = [73, 74, 75, 76, 77, 78];
 var col11 = [79, 80];
 var col12 = [81, 82, 83];
 
-var pickNum = [
-    378, 205, 161, 87, 142, 97, 6, 394, 43, 37, 251,
-    273, 420, 5, 15, 154, 297, 228, 100, 37, 46, 165,
-    12, 68, 72, 141, 27, 3, 201, 322, 300, 417, 164,
-    264, 138, 49, 46, 55, 99, 348, 306, 187, 503, 218,
-    28, 32, 160, 169, 326, 194, 256, 198, 95, 180, 9,
-    27, 415, 371, 310, 249, 29, 122, 100, 499, 378, 249,
-    208, 105, 117, 488, 38, 399, 67, 209, 198, 240, 170,
-    80, 111, 156, 38, 49, 102, 200, 99, 307, 3, 9
-];
+function loadDesignsTab() {
+    for(var counter = 1; counter <= 88; counter++) {   
+        var container = document.createElement("div");
+        var username = document.createElement("p");
+        var picture = document.createElement("img");
+        var button = document.createElement("button");
+
+        container.className = "feed-post";
+        username.className = "feed-username";
+        username.innerHTML = users[counter-1];
+        picture.className = "image-feed";
+        picture.src = "./database/" + counter + ".jpg";
+        picture.style.height = "200px";
+        picture.style.width = "200px";
+        picture.id = counter;
+        picture.addEventListener("click", function() {popDesign(this.id)});
+        button.className = "feed-button";
+        button.innerHTML = "pick";
+        button.id = counter;
+        button.addEventListener("click", function() {pickDesign(this.id)});
+
+        container.appendChild(username);
+        container.appendChild(picture);
+        container.appendChild(button);
+        $(".feed-designs").append(container);
+    }
+}
+
+function loadTopPicksTab() {
+    var top = [1, 23, 15, 50, 44, 78, 4, 88, 70, 82];
+
+    for(var i = 0; i < 10; i++) {
+        var container = document.createElement("div");
+        var rank = document.createElement("h1");
+        var username = document.createElement("p");
+        var picture = document.createElement("img");
+        var button = document.createElement("button");
+
+        container.className = "feed-post";
+        rank.innerHTML = "#" + (i+1);
+        username.className = "feed-username";
+        username.innerHTML = users[top[i]-1];
+        picture.className = "image-feed";
+        picture.src = "./database/" + top[i] + ".jpg";
+        picture.style.height = "200px";
+        picture.style.width = "200px";
+        picture.id = top[i];
+        picture.addEventListener("click", function() {popDesign(this.id)});
+        button.className = "feed-button";
+        button.innerHTML = "pick";
+        button.id = top[i];
+        button.addEventListener("click", function() {pickDesign(this.id)});
+
+        container.appendChild(rank);
+        container.appendChild(username);
+        container.appendChild(picture);
+        container.appendChild(button);
+        $(".feed-topPicks").append(container);
+    }
+}
+
+function loadCollectionsTab() {
+    
+}
 
 function loadMyPage() {
     window.location = "./user-area.html";
@@ -87,9 +119,8 @@ function showDesigns() {
     $("#feed-designs").show();
     $("#feed-topPicks").hide();
     $("#feed-collections").hide();
-    if (!$("#designs").hasClass("active-tab")) {
-        $("#designs").addClass("active-tab");
-    }
+
+    $("#designs").addClass("active-tab");
     $("#topPicks").removeClass("active-tab");
     $("#collections").removeClass("active-tab");
 }
@@ -98,11 +129,10 @@ function showTopPicks() {
     $("#feed-designs").hide();
     $("#feed-topPicks").show();
     $("#feed-collections").hide();
+
     $("#designs").removeClass("active-tab");
-    if(!$("#topPicks").hasClass("active-tab")) {
-        $("#topPicks").addClass("active-tab");
-    }
-    $("#designs").removeClass("active-tab");
+    $("#topPicks").addClass("active-tab");
+    $("#collections").removeClass("active-tab");
 }
 
 function showCollections() {
@@ -110,12 +140,9 @@ function showCollections() {
     $("#feed-topPicks").hide();
     $("#feed-collections").show();
 
-    if(!$("#collections").hasClass("active-tab")) {
-        $("#collections").addClass("active-tab");
-    }
     $("#designs").removeClass("active-tab");
     $("#topPicks").removeClass("active-tab");
-    
+    $("#collections").addClass("active-tab");
 }
 
 function popDesign(id) {
