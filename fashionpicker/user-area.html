@@ -16,8 +16,7 @@
         <link rel="stylesheet" href="../css/font-awesome.css">
         <link rel="stylesheet" href="../css/font-awesome-min.css">
         <link rel="stylesheet" type="text/css" href="header.css">
-        <link rel="stylesheet" type="text/css" href="footer.css">
-        <link rel="stylesheet" type="text/css" href="modals.css">
+        <link rel="stylesheet" type="text/css" href="scss-css/style.css">
     </head>
 
     <body>
@@ -30,21 +29,24 @@
             </div>
 
             <div class="account-settings-button" onclick="goToUserSettings()">
-                <i class="fa fa-cog" style="cursor: pointer"></i>
+                <b onclick="goToFeed()" style="cursor: pointer">Settings<i class="fa fa-cog" style="cursor: pointer"></i></b>
             </div>
         </header>
 
         <side>
-            <div class="user-icon">
-                <p><img src="images/me-placeholder.JPG" height="200" width="200"></img>
-            </div>
+            <div class= "user-info">
+                <div class="user-icon">
+                    <p><img src="images/me-placeholder.JPG" height="200" width="200"></img>
+                </div>
+    
+                <div class="user-name">
+                    <h4 id="username">User's username</h4>
+                </div>
+    
+                <div class="user-bio">
+                    <p id="bio">User's bio</p>
+                </div>
 
-            <div class="user-name">
-                <h4 id="username">User's username</h4>
-            </div>
-
-            <div class="user-bio">
-                <p id="bio">User's bio</p>
             </div>
 
             <!-- Division here -->
@@ -52,16 +54,16 @@
             <div class="selection-tabs">
                 <div class="my-designs">
                     <b>Designs</b> <br>
-                    My designs <br>
-                    My picks
+                    <div class="my-created-designs"><p>My designs</p></div>
+                   <div class="my-design-picks"><p>My picks</p></div>
                 </div>
 
                 <br>
 
                 <div class="my-collection">
                     <b>Collections</b> <br>
-                    My collections <br>
-                    My picks
+                   <div class="my-created-collections"><p>My collections </p></div> 
+                    <div class="my-collection-picks"><p>My picks</p></div>
                 </div>
 
                 <br>

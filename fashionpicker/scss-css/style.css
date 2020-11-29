@@ -41,6 +41,60 @@ header .selection-tabs .top-picks {
   border-right: 2px solid #47525E;
 }
 
+header .back-to-feed {
+  position: absolute;
+  left: 30px;
+  top: 57px;
+  width: 190px;
+}
+
+header .back-to-feed b {
+  margin-right: 15px;
+  font-size: 22px;
+  color: #8190A5;
+  cursor: pointer;
+  font-family: 'Lato';
+}
+
+header .back-to-feed b:hover {
+  color: black;
+}
+
+header .back-to-feed b i {
+  font-size: 40px;
+  cursor: pointer;
+  display: block;
+  float: left;
+  margin-top: -5px;
+  margin-right: 10px;
+}
+
+header .account-settings-button {
+  position: absolute;
+  right: 30px;
+  top: 57px;
+}
+
+header .account-settings-button b {
+  margin-right: 15px;
+  font-size: 22px;
+  color: #8190A5;
+  cursor: pointer;
+  font-family: 'Lato';
+}
+
+header .account-settings-button b:hover {
+  color: black;
+}
+
+header .account-settings-button b i {
+  font-size: 40px;
+  cursor: pointer;
+  display: block;
+  float: right;
+  margin-top: -3px;
+}
+
 header .my-page-button {
   position: absolute;
   right: 30px;
@@ -62,6 +116,10 @@ header .my-page-button b {
 }
 
 header .my-page-button b:hover {
+  color: black !important;
+}
+
+header .my-page-button b:hover i {
   color: black;
 }
 
@@ -78,6 +136,47 @@ header .my-page-button i:hover {
   color: black;
 }
 
+side {
+  position: absolute;
+  left: 5vw;
+  margin: 0 auto;
+  max-width: 1140px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+side p {
+  margin-bottom: 5px;
+}
+
+side p.active-profile-setting {
+  color: palevioletred !important;
+  font-weight: bold !important;
+}
+
+side .user-info {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-right: 15px;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  width: 217px;
+}
+
+side .selection-tabs {
+  width: 217px;
+  padding-top: 15px;
+  border-right: 2px solid black;
+}
+
+side .my-designs b,
+side .my-collection b {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
 main {
   max-width: 1200px;
   margin: 0 auto;
@@ -89,6 +188,38 @@ main {
   padding-right: 30px;
   padding-left: 30px;
   overflow: auto;
+}
+
+main .user-designs {
+  background: #E98FAF;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 20px;
+  color: white;
+  border-radius: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 20px;
+  padding-bottom: 2px;
+  cursor: pointer;
+}
+
+main .user-collections {
+  background: #CC4B4B;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  margin: 0 auto;
+  font-size: 20px;
+  color: white;
+  border-radius: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 20px;
+  padding-bottom: 2px;
 }
 
 main .feed-designs {
