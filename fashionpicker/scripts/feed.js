@@ -12,6 +12,8 @@ $(document).ready(function(){
         picture.src = "./database/" + counter + ".jpg";
         picture.style.height = "200px";
         picture.style.width = "200px";
+        picture.id = counter;
+        picture.addEventListener("click", function() {popDesign(this.id)});
         button.className = "feed-button";
         button.innerHTML = "pick";
         button.id = counter;
@@ -23,10 +25,6 @@ $(document).ready(function(){
         $(".feed-designs").append(container);
     }
 });
-
-function pickDesign(id) {
-    console.log("PICK DESIGN WITH ID: " + id);
-}
 
 var users = [
     "Cloth Collage", "Fantasy Dress", "Streetwear Sam", "Concept Fashion",
@@ -83,4 +81,49 @@ function loadMyPage() {
 
 function loadSettings() {
     window.location = "./user-settings.html";
+}
+
+function showDesigns() {
+    $("#feed-designs").show();
+    $("#feed-topPicks").hide();
+    $("#feed-collections").hide();
+    $("#designs").addClass("active-tab");
+    $("#topPicks").removeClass("active-tab");
+    $("#designs").removeClass("active-tab");
+}
+
+function showTopPicks() {
+    $("#feed-designs").hide();
+    $("#feed-topPicks").show();
+    $("#feed-collections").hide();
+    $("#designs").removeClass("active-tab");
+    $("#topPicks").addClass("active-tab");
+    $("#designs").removeClass("active-tab");
+}
+
+function showCollections() {
+    $("#feed-designs").hide();
+    $("#feed-topPicks").hide();
+    $("#feed-collections").show();
+    $("#collections").addClass("active-tab");
+    $("#designs").removeClass("active-tab");
+    $("#topPicks").removeClass("active-tab");
+    $("#designs").addClass("active-tab");
+}
+
+function popDesign(id) {
+    Swal.fire({
+        title: users[id-1],
+        text: "",
+        confirmButtonText: "Close",
+        imageUrl: "./database/" + id + ".jpg",
+        imageWidth: 400,
+        imageHeight: 400,
+        imageAlt: 'Design ' + id,
+        html: "<p>Comments:</br> ... </br></p>"
+      })
+}
+
+function pickDesign(id) {
+    console.log("PICK DESIGN WITH ID: " + id);
 }

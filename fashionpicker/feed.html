@@ -28,29 +28,33 @@
             </div>
 
             <div class="selection-tabs">
-                <div class="designs">
+                <div id="designs" class="designs" onclick="showDesigns()">
                     <p><b style="cursor:pointer">Designs</b></p>
                 </div>
 
-                <div class="top-picks">
+                <div id="topPicks" class="top-picks" onclick="showTopPicks()">
                     <p style="cursor:pointer">Top Picks</p>
                 </div>
 
-                <div class="collection">
+                <div id="collections" class="collection" onclick="showCollections()">
                     <p style="cursor:pointer">Collections</p>
                 </div>
             </div>
         </header>
 
         <main>
-            <div id="feed-design" class="feed-designs">
+            <div id="feed-designs" class="feed-designs">
             </div>
 
-            <div id="feed-collections" class="feed-collections">
+            <div id="feed-topPicks" class="feed-topPicks" style="display:none;">
+            </div>
+
+            <div id="feed-collections" class="feed-collections" style="display:none;">
             </div>
         </main>
 
         <script type="text/javascript" src="scripts/feed.js"></script>
         <script type="text/javascript" src="scripts/redirects.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     </body>
 </html>
