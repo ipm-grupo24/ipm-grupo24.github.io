@@ -2,12 +2,15 @@ $(document).ready(function(){
     for(var counter = 1; counter <= 88; counter++) {
         
         var picture = document.createElement("img");
+        var container = document.createElement("div");
+        container.className = "feed-post";
 
         picture.className = "image-feed";
         picture.src = "./database/" + counter + ".jpg";
         picture.style.height = "200px";
         picture.style.width = "200px";
-        $(".feed-designs").append(picture);
+        container.appendChild(picture)
+        $(".feed-designs").append(container);
     }
 });
 
