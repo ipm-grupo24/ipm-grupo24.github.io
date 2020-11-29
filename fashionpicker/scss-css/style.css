@@ -1,3 +1,7 @@
+.active-tab {
+  font-weight: bolder;
+}
+
 header {
   position: relative;
   padding-top: 20px;
@@ -108,7 +112,7 @@ header .my-page-button img {
 }
 
 header .my-page-button b {
-  margin-right: 15px;
+  margin-right: 30px;
   font-size: 22px;
   color: #8190A5;
   cursor: pointer;

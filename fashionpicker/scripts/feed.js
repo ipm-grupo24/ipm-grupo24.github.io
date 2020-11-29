@@ -87,9 +87,11 @@ function showDesigns() {
     $("#feed-designs").show();
     $("#feed-topPicks").hide();
     $("#feed-collections").hide();
-    $("#designs").addClass("active-tab");
+    if (!$("#designs").hasClass("active-tab")) {
+        $("#designs").addClass("active-tab");
+    }
     $("#topPicks").removeClass("active-tab");
-    $("#designs").removeClass("active-tab");
+    $("#collections").removeClass("active-tab");
 }
 
 function showTopPicks() {
@@ -97,7 +99,9 @@ function showTopPicks() {
     $("#feed-topPicks").show();
     $("#feed-collections").hide();
     $("#designs").removeClass("active-tab");
-    $("#topPicks").addClass("active-tab");
+    if(!$("#topPicks").hasClass("active-tab")) {
+        $("#topPicks").addClass("active-tab");
+    }
     $("#designs").removeClass("active-tab");
 }
 
@@ -105,10 +109,13 @@ function showCollections() {
     $("#feed-designs").hide();
     $("#feed-topPicks").hide();
     $("#feed-collections").show();
-    $("#collections").addClass("active-tab");
+
+    if(!$("#collections").hasClass("active-tab")) {
+        $("#collections").addClass("active-tab");
+    }
     $("#designs").removeClass("active-tab");
     $("#topPicks").removeClass("active-tab");
-    $("#designs").addClass("active-tab");
+    
 }
 
 function popDesign(id) {
