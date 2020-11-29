@@ -201,6 +201,23 @@ main {
         color:#E98FAF;
     }
 
+    .feed-post {
+        &>p {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+        }
+
+       img {
+           width: 435px !important;
+           height: 435px !important;
+       } 
+    }
+
     .user-designs {
         background: #E98FAF;
         width: fit-content;

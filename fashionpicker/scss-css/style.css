@@ -198,6 +198,21 @@ main > p {
   color: #E98FAF;
 }
 
+main .feed-post > p {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+main .feed-post button {
+  display: block;
+  margin: 0 auto;
+}
+
+main .feed-post img {
+  width: 435px !important;
+  height: 435px !important;
+}
+
 main .user-designs {
   background: #E98FAF;
   width: -webkit-fit-content;
