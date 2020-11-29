@@ -46,3 +46,16 @@ var users = [
     "Graphic Tees", "Graphic Tees", "Graphic Tees", "Dress by Duarte",
     "Concept Fashion", "Cloth Collage", "Swell Swim" , "Concept Fashion"
 ];
+
+var col1 = [15, 16, 17];
+var col2 = [18, 19];
+var col3 = [20, 21];
+var col4 = [22, 58, 59];
+var col5 = [30, 31];
+var col6 = [36, 37, 38];
+var col7 = [45, 46];
+var col8 = [50, 51, 52, 53];
+var col9 = [66, 67, 68];
+var col10 = [73, 74, 75, 76, 77, 78];
+var col11 = [79, 80];
+var col12 = [81, 82, 83];
