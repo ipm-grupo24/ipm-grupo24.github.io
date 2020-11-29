@@ -184,10 +184,14 @@ main {
   color: #47525E;
   text-align: center;
   height: 100vh;
-  overflow: hidden;
   padding-right: 30px;
   padding-left: 30px;
-  overflow: auto;
+  margin-bottom: 100px;
+}
+
+main > p {
+  font-size: 22px;
+  color: #E98FAF;
 }
 
 main .user-designs {
@@ -225,8 +229,8 @@ main .user-collections {
 main .feed-designs {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   -webkit-column-gap: 30px;
           column-gap: 30px;
   row-gap: 30px;
@@ -235,6 +239,8 @@ main .feed-designs {
 
 main .feed-designs img {
   margin: 0 auto;
+  height: 300px !important;
+  width: 300px !important;
 }
 
 main .front-logo img {
@@ -287,5 +293,70 @@ main #login form input:not(:last-child) {
   height: 41px;
   font-size: 22px;
   padding-left: 10px;
+}
+
+main .change-icon {
+  margin-bottom: 30px;
+}
+
+main .change-icon input {
+  margin-bottom: 15px;
+}
+
+main .change-icon img {
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+main .change-username {
+  margin-bottom: 15px;
+}
+
+main .change-username input {
+  margin-bottom: 15px;
+}
+
+main .change-email {
+  margin-bottom: 15px;
+}
+
+main .change-email input {
+  margin-bottom: 15px;
+}
+
+main .change-password {
+  margin-bottom: 15px;
+}
+
+main .change-password input {
+  margin-bottom: 15px;
+}
+
+main .actionButtons {
+  margin-top: 40px;
+}
+
+main .actionButtons button:first-child {
+  background-color: #CC4B4B;
+  border-radius: 5px;
+  width: 113px;
+  height: 37px;
+  border-color: transparent;
+  font-size: 21px;
+  color: white;
+  margin-bottom: 25px;
+  margin-right: 20px;
+}
+
+main .actionButtons button:last-child {
+  background-color: #E98FAF;
+  border-radius: 5px;
+  width: 113px;
+  height: 37px;
+  border-color: transparent;
+  font-size: 21px;
+  color: white;
+  margin-bottom: 25px;
 }
 /*# sourceMappingURL=style.css.map */
