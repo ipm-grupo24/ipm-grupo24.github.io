@@ -1,25 +1,31 @@
 $(document).ready(function(){
-    for(var counter = 1; counter <= 88; counter++) {
-        
-        var picture = document.createElement("img");
+    for(var counter = 1; counter <= 88; counter++) {   
         var container = document.createElement("div");
-        container.className = "feed-post";
+        var username = document.createElement("p");
+        var picture = document.createElement("img");
+        var button = document.createElement("button");
 
+        container.className = "feed-post";
+        username.className = "feed-username";
+        username.innerHTML = users[counter-1];
         picture.className = "image-feed";
         picture.src = "./database/" + counter + ".jpg";
         picture.style.height = "200px";
         picture.style.width = "200px";
-        container.appendChild(picture)
+        button.className = "feed-button";
+        button.innerHTML = "pick";
+        button.id = counter;
+        button.addEventListener("click", function() {pickDesign(this.id)});
+
+        container.appendChild(username);
+        container.appendChild(picture);
+        container.appendChild(button);
         $(".feed-designs").append(container);
     }
 });
 
-function loadMyPage() {
-    window.location = "./user-area.html";
-}
-
-function loadSettings() {
-    window.location = "./user-settings.html";
+function pickDesign(id) {
+    console.log("PICK DESIGN WITH ID: " + id);
 }
 
 var users = [
@@ -70,3 +76,11 @@ var pickNum = [
     208, 105, 117, 488, 38, 399, 67, 209, 198, 240, 170,
     80, 111, 156, 38, 49, 102, 200, 99, 307, 3, 9
 ];
+
+function loadMyPage() {
+    window.location = "./user-area.html";
+}
+
+function loadSettings() {
+    window.location = "./user-settings.html";
+}
