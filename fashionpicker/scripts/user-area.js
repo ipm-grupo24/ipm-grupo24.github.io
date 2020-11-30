@@ -3,7 +3,4 @@ $(document).ready(function(){
     $("#bio").text(sessionStorage.getItem("bio"));
 
     $(".my-created-designs p").addClass("active-profile-setting");
-
-    
-
 });

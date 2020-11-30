@@ -6,7 +6,7 @@ $(document).ready(function() {
     email = sessionStorage.getItem("email");
     bio = sessionStorage.getItem("bio");
 
-    $("#userna me").attr("placeholder", username);
+    $("#username").attr("placeholder", username);
     $("#email").attr("placeholder", email);
     $("#bio").attr("placeholder", bio);
 });
@@ -14,7 +14,17 @@ $(document).ready(function() {
 function submitSettings(event) {
     event.preventDefault();
 
-    // TODO
+    var tmp = $("#username").val();
+    if(tmp !== "" && tmp !== username) sessionStorage.setItem("username", tmp);
+
+    var tmp = $("#email").val();
+    if(tmp !== "" && tmp !== email) sessionStorage.setItem("email", tmp);
+
+    var tmp = $("#newPass").val();
+    if(tmp !== "" && tmp !== password) sessionStorage.setItem("password", tmp);
+
+    var tmp = $("#bio").val();
+    if(tmp !== "" && tmp !== bio) sessionStorage.setItem("bio", tmp);
     
     Swal.fire({
         position: 'bottom-end',

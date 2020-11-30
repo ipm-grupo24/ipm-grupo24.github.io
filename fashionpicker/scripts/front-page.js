@@ -27,7 +27,8 @@ function doLogin(event, e, p) {
     sessionStorage.setItem("bio", "");
     sessionStorage.setItem("designs", JSON.stringify([]));
     sessionStorage.setItem("collections", JSON.stringify([]));
-    // <-- if need to store more stuff about the user aka "database" in memory
+    sessionStorage.setItem("designPicks", JSON.stringify([]));
+    sessionStorage.setItem("collectionsPicks", JSON.stringify([]));
 
     $("#login").hide();
     goToFeed();
