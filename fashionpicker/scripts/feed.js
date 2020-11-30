@@ -149,6 +149,8 @@ function pickDesign(id) {
     if(!picks.includes(id)) {
         picks.push(id);
         picks.sort();
+        $(`#${id}`).addClass("picked");
+        sessionStorage.setItem("designPicks", JSON.stringify(picks));
         Swal.fire({
             position: 'bottom-end',
             icon: 'success',
@@ -158,12 +160,11 @@ function pickDesign(id) {
         });
     } else
         Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'This design is already in your list!',
-            footer: '<a href="./user-area.html">Take me to my list</a>'
-        })
-    sessionStorage.setItem("designPicks", JSON.stringify(picks));
+         icon: 'error',
+        title: 'Oops...',
+        text: 'This design is already in your list!',
+        footer: '<a href="./user-area.html">Take me to my list</a>'
+    })
 }
 
 function pickCollection(id) {
@@ -172,6 +173,8 @@ function pickCollection(id) {
     if(!picks.includes(id)) {
         picks.push(id);
         picks.sort();
+        $(`#${id}`).addClass("picked");
+        sessionStorage.setItem("collectionsPicks", JSON.stringify(picks));
         Swal.fire({
             position: 'bottom-end',
             icon: 'success',
@@ -185,5 +188,4 @@ function pickCollection(id) {
         text: 'This collection is already in your list!',
         footer: '<a href="./user-area.html">Go to my page</a>'
     })
-    sessionStorage.setItem("collectionsPicks", JSON.stringify(picks));
 }
