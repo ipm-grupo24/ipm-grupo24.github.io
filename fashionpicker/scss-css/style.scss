@@ -2,6 +2,14 @@
     font-weight: bolder;
 }
 
+.swal2-confirm {
+    background-color: #E98FAF;
+
+    &:hover {
+        background-color: palevioletred;
+    }
+}
+
 header {
     position: relative;
     padding-top: 20px;
@@ -201,15 +209,46 @@ main {
         color:#E98FAF;
     }
 
+
+    .feed-topPicks {
+        margin-top: -10px;
+        .feed-post {
+            &:not(:last-child) {
+                width: fit-content;
+                margin: 0 auto;
+                padding-bottom: 20px;
+                border-bottom: 3px solid;
+                margin-bottom: 20px;
+            } 
+        }  
+    }
+
     .feed-post {
+        position: relative;
+
         &>p {
             font-size: 30px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         button {
-            display: block;
-            margin: 0 auto;
+                display: block;
+                margin: 0 auto;
+                background-color: transparent;
+                border: none;
+                color: transparent;
+                background-image: url(../images/logo-w.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                z-index: 2;
+                width: 86px;
+                padding: 0;
+                height: 86px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -35px;
+                filter: grayscale(1);
         }
 
        img {
@@ -246,7 +285,8 @@ main {
         padding-bottom: 2px;
     }
 
-    .feed-designs {
+    .feed-designs,
+    .feed-collections {
         display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 30px;

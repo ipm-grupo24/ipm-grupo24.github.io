@@ -2,6 +2,14 @@
   font-weight: bolder;
 }
 
+.swal2-confirm {
+  background-color: #E98FAF;
+}
+
+.swal2-confirm:hover {
+  background-color: palevioletred;
+}
+
 header {
   position: relative;
   padding-top: 20px;
@@ -198,14 +206,48 @@ main > p {
   color: #E98FAF;
 }
 
+main .feed-topPicks {
+  margin-top: -10px;
+}
+
+main .feed-topPicks .feed-post:not(:last-child) {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  border-bottom: 3px solid;
+  margin-bottom: 20px;
+}
+
+main .feed-post {
+  position: relative;
+}
+
 main .feed-post > p {
   font-size: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 main .feed-post button {
   display: block;
   margin: 0 auto;
+  background-color: transparent;
+  border: none;
+  color: transparent;
+  background-image: url(../images/logo-w.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 2;
+  width: 86px;
+  padding: 0;
+  height: 86px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -35px;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
 }
 
 main .feed-post img {
@@ -245,7 +287,8 @@ main .user-collections {
   padding-bottom: 2px;
 }
 
-main .feed-designs {
+main .feed-designs,
+main .feed-collections {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -256,7 +299,8 @@ main .feed-designs {
   padding-bottom: 50px;
 }
 
-main .feed-designs img {
+main .feed-designs img,
+main .feed-collections img {
   margin: 0 auto;
   height: 435px !important;
   width: 435px !important;
