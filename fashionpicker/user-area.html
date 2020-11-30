@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="../css/font-awesome-min.css">
         <link rel="stylesheet" type="text/css" href="header.css">
         <link rel="stylesheet" type="text/css" href="scss-css/style.css">
+        <link rel="stylesheet" type="text/css" href="scripts/goUpButton.css">
     </head>
 
     <body>
@@ -54,7 +55,7 @@
             <div class="selection-tabs">
                 <div class="my-designs">
                     <b>Designs</b> <br>
-                    <div class="my-created-designs" onclick="showDesigns()"><p>My designs</p></div>
+                    <div class="my-created-designs active-user-tab" onclick="showDesigns()"><p>My designs</p></div>
                    <div class="my-design-picks" onclick="showDesignPicks()"><p>My picks</p></div>
                 </div>
 
@@ -70,6 +71,7 @@
         </side>
 
         <main>
+            <a id="button"></a>
             <div id="user-designs">
                 <p>Oops.. You don't have any designs in the platform yet!</p>
                 <div class="user-designs">
