@@ -9,3 +9,7 @@ function goToUserSettings() {
 function goToUserArea() {
     window.location = "./user-area.html";
 }
+
+function goToNewDesign() {
+    window.location = "./new-design.html";
+}
