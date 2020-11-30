@@ -54,41 +54,48 @@
             <div class="selection-tabs">
                 <div class="my-designs">
                     <b>Designs</b> <br>
-                    <div class="my-created-designs"><p>My designs</p></div>
-                   <div class="my-design-picks"><p>My picks</p></div>
+                    <div class="my-created-designs" onclick="showDesigns()"><p>My designs</p></div>
+                   <div class="my-design-picks" onclick="showDesignPicks()"><p>My picks</p></div>
                 </div>
 
                 <br>
 
                 <div class="my-collection">
                     <b>Collections</b> <br>
-                   <div class="my-created-collections"><p>My collections </p></div> 
-                    <div class="my-collection-picks"><p>My picks</p></div>
+                   <div class="my-created-collections" onclick="showCollections()"><p>My collections </p></div> 
+                    <div class="my-collection-picks" onclick="showCollectionPicks()"><p>My picks</p></div>
                 </div>
-
                 <br>
             </div>
         </side>
 
         <main>
-            <div class="user-designs">
-                <!-- Vai ser populado pelo javascript... -->
-
-                <div class="new-design">
-                    <!-- Adicionar link depois... --><a>+ Add a new design</a>
+            <div id="user-designs">
+                <p>Oops.. You don't have any designs in the platform yet!</p>
+                <div class="user-designs">
+                    <div class="new-design">
+                        <!-- Adicionar link depois... --><a>+ Add a new design</a>
+                    </div>
                 </div>
             </div>
 
-            <div class="user-collections">
-                <!-- Vai ser populado pelo javascript... -->
+            <div id="user-list-designs" style="display:none;"></div>
 
-                <div class="new-collection">
-                <!-- Adicionar link depois... --><a>+ Create a new collection</a>
+            <div id="user-collections" style="display:none;">
+                <p>Oops.. You don't have any collections in the platform yet!</p>
+                <div class="user-collections">
+                    <div class="new-collection">
+                    <!-- Adicionar link depois... --><a>+ Create a new collection</a>
+                    </div>
                 </div>
             </div>
+
+            <div id="user-list-collections" style="display:none;"></div>
         </main>
 
         <script type="text/javascript" src="scripts/user-area.js"></script>
+        <script type="text/javascript" src="scripts/database.js"></script>
         <script type="text/javascript" src="scripts/redirects.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     </body>
 </html>
