@@ -25,7 +25,7 @@ function showDesigns() {
     $("#user-collections").hide();
     $(".my-created-collections").removeClass("active-user-tab");
     $("#user-list-collections").hide();
-    $(".my-collections-created").removeClass("active-user-tab");
+    $(".my-collection-picks").removeClass("active-user-tab");
 }
 
 function showDesignPicks() {
@@ -36,7 +36,7 @@ function showDesignPicks() {
     $("#user-collections").hide();
     $(".my-created-collections").removeClass("active-user-tab");
     $("#user-list-collections").hide();
-    $(".my-collections-created").removeClass("active-user-tab");
+    $(".my-collection-picks").removeClass("active-user-tab");
     $("#user-list-designs").html("");
 
     var picks = JSON.parse(sessionStorage.getItem("designPicks"));
@@ -80,7 +80,7 @@ function showCollections() {
     $("#user-collections").show();
     $(".my-created-collections").addClass("active-user-tab");
     $("#user-list-collections").hide();
-    $(".my-collections-created").removeClass("active-user-tab");
+    $(".my-collection-picks").removeClass("active-user-tab");
 }
 
 function showCollectionPicks() {
@@ -91,7 +91,7 @@ function showCollectionPicks() {
     $("#user-collections").hide();
     $(".my-created-collections").removeClass("active-user-tab");
     $("#user-list-collections").show();
-    $(".my-collections-created").addClass("active-user-tab");
+    $(".my-collection-picks").addClass("active-user-tab");
     $("#user-list-collections").html("");
 
     var picks = JSON.parse(sessionStorage.getItem("collectionsPicks"));
