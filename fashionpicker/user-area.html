@@ -73,25 +73,25 @@
         <main>
             <a id="button"></a>
             <div id="user-designs">
-                <p>Oops.. You don't have any designs in the platform yet!</p>
+                <p id="designs-empty" style="display:none;">Oops.. You don't have any designs in the platform yet!</p>
+                <div id="uploaded" class="user-sub-design" style="display:none;">
+                    <img src="database/89.jpg"></img>
+                <p></br></p>
+                </div>
                 <div class="user-designs">
                     <div class="new-design" onclick="goToNewDesign()">
-                        <!-- Adicionar link depois... --><a>+ Add a new design</a>
+                        <a>+ Add a new design</a>
                     </div>
-                </div>
-
-                <div class="user-sub-design">
-                    <img src="database/89.jpg"></img>
                 </div>
             </div>
 
             <div id="user-list-designs" style="display:none;"></div>
 
             <div id="user-collections" style="display:none;">
-                <p>Oops.. You don't have any collections in the platform yet!</p>
+                <p id="collections-empty">Oops.. You don't have any collections in the platform yet!</p>
                 <div class="user-collections">
                     <div class="new-collection">
-                    <!-- Adicionar link depois... --><a>+ Create a new collection</a>
+                    <a>+ Create a new collection</a>
                     </div>
                 </div>
             </div>

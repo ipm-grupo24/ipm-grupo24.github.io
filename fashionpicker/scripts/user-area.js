@@ -15,6 +15,9 @@ $(document).ready(function(){
             e.preventDefault();
             $('html, body').animate({scrollTop:0}, '300');
         });
+
+    if(JSON.parse(sessionStorage.getItem("uploaded")) === true) $("#uploaded").show();
+    else $("#designs-empty").show();
 });
 
 function showDesigns() {
@@ -26,6 +29,9 @@ function showDesigns() {
     $(".my-created-collections").removeClass("active-user-tab");
     $("#user-list-collections").hide();
     $(".my-collection-picks").removeClass("active-user-tab");
+
+    if(JSON.parse(sessionStorage.getItem("uploaded")) === true) $("#uploaded").show();
+    else $("#designs-empty").show();
 }
 
 function showDesignPicks() {
