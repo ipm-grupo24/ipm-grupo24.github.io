@@ -144,12 +144,12 @@ function showCollections() {
 }
 
 function pickDesign(id) {
+    var i = id.substring(7);
     var picks = JSON.parse(sessionStorage.getItem("designPicks"));
 
-    if(!picks.includes(id)) {
-        picks.push(id);
+    if(!picks.includes(i)) {
+        picks.push(i);
         picks.sort();
-        $(`#designs${id}`).addClass("picked");
         sessionStorage.setItem("designPicks", JSON.stringify(picks));
         Swal.fire({
             position: 'bottom-end',
@@ -168,12 +168,12 @@ function pickDesign(id) {
 }
 
 function pickCollection(id) {
+    var i = id.substring(11);
     var picks = JSON.parse(sessionStorage.getItem("collectionsPicks"));
 
-    if(!picks.includes(id)) {
-        picks.push(id);
+    if(!picks.includes(i)) {
+        picks.push(i);
         picks.sort();
-        $(`#collections${id}`).addClass("picked");
         sessionStorage.setItem("collectionsPicks", JSON.stringify(picks));
         Swal.fire({
             position: 'bottom-end',
