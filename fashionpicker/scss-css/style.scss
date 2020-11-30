@@ -185,6 +185,11 @@ side {
 
     .my-designs,
     .my-collection {
+
+        p {
+            cursor: pointer;
+        }
+        
         b {
             font-size: 20px;
             margin-bottom: 10px;
