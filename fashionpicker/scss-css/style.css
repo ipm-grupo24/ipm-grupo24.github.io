@@ -183,6 +183,11 @@ side .selection-tabs {
   border-right: 2px solid black;
 }
 
+side .my-designs p,
+side .my-collection p {
+  cursor: pointer;
+}
+
 side .my-designs b,
 side .my-collection b {
   font-size: 20px;
