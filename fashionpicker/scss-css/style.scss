@@ -2,12 +2,21 @@
     font-weight: bolder;
 }
 
+.active-user-tab {
+    color: #E98FAF !important;
+    font-weight: bold !important;
+}
+
 .swal2-confirm {
     background-color: #E98FAF;
 
     &:hover {
         background-color: palevioletred;
     }
+}
+
+.picked {
+    filter: none !important;
 }
 
 header {
@@ -160,13 +169,6 @@ side {
 
     p {
         margin-bottom: 5px;
-
-        &.active-profile-setting {
-    
-            color: palevioletred !important;   
-            font-weight: bold !important;
-        
-        }
     }
 
     .user-info {
@@ -189,7 +191,7 @@ side {
         p {
             cursor: pointer;
         }
-        
+
         b {
             font-size: 20px;
             margin-bottom: 10px;
@@ -214,6 +216,40 @@ main {
         color:#E98FAF;
     }
 
+    #user-designs,
+    #user-list-designs,
+    #user-collections,
+    #user-list-collections {
+        margin-left: 250px;
+    }
+
+    .area-post {
+
+        &:not(:last-child) {
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+            border-bottom: 3px solid;
+        }
+
+        img {
+            height: 435px !important;
+            width: 435px !important;
+        }
+        button {
+            background-color: #CC4B4B;
+                border-radius: 5px;
+                width: 113px;
+                height: 37px;
+                border-color: transparent;
+                font-size: 21px;
+                color: white;
+                margin-bottom: 25px;
+                display: block;
+                margin-right: 20px;
+                margin: 0 auto;
+                margin-top:40px;
+        }
+    }
 
     .feed-topPicks {
         margin-top: -10px;

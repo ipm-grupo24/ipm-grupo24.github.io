@@ -2,12 +2,22 @@
   font-weight: bolder;
 }
 
+.active-user-tab {
+  color: #E98FAF !important;
+  font-weight: bold !important;
+}
+
 .swal2-confirm {
   background-color: #E98FAF;
 }
 
 .swal2-confirm:hover {
   background-color: palevioletred;
+}
+
+.picked {
+  -webkit-filter: none !important;
+          filter: none !important;
 }
 
 header {
@@ -162,11 +172,6 @@ side p {
   margin-bottom: 5px;
 }
 
-side p.active-profile-setting {
-  color: palevioletred !important;
-  font-weight: bold !important;
-}
-
 side .user-info {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -209,6 +214,39 @@ main {
 main > p {
   font-size: 22px;
   color: #E98FAF;
+}
+
+main #user-designs,
+main #user-list-designs,
+main #user-collections,
+main #user-list-collections {
+  margin-left: 250px;
+}
+
+main .area-post:not(:last-child) {
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  border-bottom: 3px solid;
+}
+
+main .area-post img {
+  height: 435px !important;
+  width: 435px !important;
+}
+
+main .area-post button {
+  background-color: #CC4B4B;
+  border-radius: 5px;
+  width: 113px;
+  height: 37px;
+  border-color: transparent;
+  font-size: 21px;
+  color: white;
+  margin-bottom: 25px;
+  display: block;
+  margin-right: 20px;
+  margin: 0 auto;
+  margin-top: 40px;
 }
 
 main .feed-topPicks {
