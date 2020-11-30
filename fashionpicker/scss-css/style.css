@@ -220,6 +220,26 @@ main .feed-topPicks .feed-post:not(:last-child) {
   margin-bottom: 20px;
 }
 
+main .feed-designs .feed-post:not(:last-child),
+main .feed-collections .feed-post:not(:last-child) {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  border-bottom: 3px solid;
+}
+
+main .feed-designs .feed-post:not(:last-child):nth-child(odd):after,
+main .feed-collections .feed-post:not(:last-child):nth-child(odd):after {
+  content: " ";
+  height: 89%;
+  width: 3px;
+  border-right: 3px solid;
+  right: -77px;
+  position: absolute;
+}
+
 main .feed-post {
   position: relative;
 }
@@ -245,7 +265,7 @@ main .feed-post button {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -35px;
+  bottom: 10px;
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
 }

@@ -223,6 +223,29 @@ main {
         }  
     }
 
+    .feed-designs,
+    .feed-collections {
+        .feed-post {
+            &:not(:last-child) {
+                width: fit-content;
+                margin: 0 auto;
+                padding-bottom: 20px;
+                border-bottom: 3px solid;
+                
+                &:nth-child(odd) {
+                    &:after {
+                        content: " ";
+                        height: 89%;
+                        width: 3px;
+                        border-right: 3px solid;
+                        right: -77px;
+                        position: absolute;
+                    }
+                }
+            } 
+        }  
+    }    
+
     .feed-post {
         position: relative;
 
@@ -247,7 +270,7 @@ main {
                 position: absolute;
                 left: 0;
                 right: 0;
-                bottom: -35px;
+                bottom: 10px;
                 filter: grayscale(1);
         }
 
@@ -293,8 +316,6 @@ main {
         row-gap: 30px;
         padding-bottom: 50px;
 
-
-
         img {
             margin: 0 auto;
             height: 435px !important;
@@ -310,7 +331,6 @@ main {
             height: 40vw;
         }
     }
-
     
     .start-button {
         .pitch {    
