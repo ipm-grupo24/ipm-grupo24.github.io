@@ -185,6 +185,8 @@ side {
         border-right: 2px solid black;
     }
 
+   
+
     .my-designs,
     .my-collection {
 
@@ -214,6 +216,82 @@ main {
     &>p {
         font-size: 22px;
         color:#E98FAF;
+    }
+
+    .control-buttons {
+        .cancel-button {
+            a {
+                background-color: #CC4B4B;
+                border-radius: 5px;
+                width: 113px;
+                height: 37px;
+                border-color: transparent;
+                font-size: 21px;
+                color: white;
+                margin-bottom: 15px;
+                display: block;
+                margin-right: 20px;
+                margin: 0 auto;
+                margin-top:40px;
+            }
+        }
+
+        .next-button {
+            margin-top: -15px;
+            a {
+                background-color: #E98FAF;
+               
+                border-radius: 5px;
+                width: 113px;
+                height: 37px;
+                border-color: transparent;
+                font-size: 21px;
+                color: white;
+                margin-bottom: 35px;
+                display: block;
+                margin-right: 20px;
+                margin: 0 auto;
+                margin-top:40px;  
+            }
+        }
+    }
+
+    .upload-button {
+        button {
+            background-color: #E98FAF;
+            border-radius: 5px;
+            width: 113px;
+            font-weight: bold;
+            height: 50px;
+            border-color: transparent;
+            font-size: 15px;
+            color: white; 
+            margin-bottom: 25px;    
+        }
+    }
+
+    .name-input {
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        label {
+            font-weight: bold;
+            color: #E98FAF;
+        }
+    }
+
+    .tags-input {
+        width: fit-content;
+        margin: 0 auto;
+        position: relative;
+
+        label {
+            position: absolute;
+            left: -50px;
+            top: 30px;
+            font-weight: bold;
+            color: #E98FAF;
+        }
     }
 
     #user-designs,
