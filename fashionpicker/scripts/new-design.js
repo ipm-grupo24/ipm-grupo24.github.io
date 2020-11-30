@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("#user-submission").hide();
+    console.log("got it here");
 });
 
 function showSubmission() {
