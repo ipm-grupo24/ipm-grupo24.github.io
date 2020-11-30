@@ -2,7 +2,19 @@ $(document).ready(function(){
     loadDesignsTab();
     loadTopPicksTab();
     loadCollectionsTab();
-});
+
+    var btn = $("#button");
+
+    $(window).scroll(function() {
+        if($(window).scrollTop() > 300) btn.addClass('show');
+        else btn.removeClass('show');
+        });
+
+        btn.on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop:0}, '300');
+        });
+    });
 
 var users = [
     "Cloth Collage", "Fantasy Dress", "Streetwear Sam", "Concept Fashion",
@@ -29,18 +41,23 @@ var users = [
     "Concept Fashion", "Cloth Collage", "Swell Swim" , "Concept Fashion"
 ];
 
-var col1 = [15, 16, 17];
-var col2 = [18, 19];
-var col3 = [20, 21];
-var col4 = [22, 58, 59];
-var col5 = [30, 31];
-var col6 = [36, 37, 38];
-var col7 = [45, 46];
-var col8 = [50, 51, 52, 53];
-var col9 = [66, 67, 68];
-var col10 = [73, 74, 75, 76, 77, 78];
-var col11 = [79, 80];
-var col12 = [81, 82, 83];
+var picksNumber = [
+    378, 205, 161, 87, 142, 97, 6, 394, 43, 37,
+    251, 273, 420, 5, 15, 154, 297, 228, 100, 37,
+    46, 165, 12, 68, 72, 141, 27, 3, 201, 322,
+    300, 417, 164, 264, 138, 49, 46, 55, 99, 348,
+    306, 187, 503, 218, 28, 32, 160, 169, 326, 194,
+    256, 198, 95, 180, 9, 27, 415, 371, 310, 249,
+    29, 122, 100, 499, 364, 249, 208, 105, 117, 488,
+    38, 399, 67, 209, 198, 240, 170, 80, 111, 156,
+    38, 49, 102, 200, 99, 307, 3, 9
+];
+
+var collections = [
+    [15, 16, 17], [18, 19], [20, 21], [22, 58, 59], [30, 31],
+    [36, 37, 38], [45, 46], [50, 51, 52, 53], [66, 67, 68], [73, 74, 75, 76, 77, 78],
+    [79, 80], [81, 82, 83]
+];
 
 function loadDesignsTab() {
     for(var counter = 1; counter <= 88; counter++) {   
@@ -71,7 +88,7 @@ function loadDesignsTab() {
 }
 
 function loadTopPicksTab() {
-    var top = [1, 23, 15, 50, 44, 78, 4, 88, 70, 82];
+    var top = [43, 64, 70, 13, 32, 57, 72, 8, 1, 58];
 
     for(var i = 0; i < 10; i++) {
         var container = document.createElement("div");
@@ -104,7 +121,31 @@ function loadTopPicksTab() {
 }
 
 function loadCollectionsTab() {
-    
+    for(var i = 0; i < collections.length; i++) {
+        var container = document.createElement("div");
+        var name = document.createElement("p");
+        var preview = document.createElement("img");
+        var button = document.createElement("button");
+
+        container.className = "feed-post";
+        name.className = "feed-username";
+        name.innerHTML = `Collection ${(i+1)}`;
+        preview.className = "image-feed";
+        preview.src = "./database/" + collections[i][0] + ".jpg"; // TEST
+        preview.style.height = "200px";
+        preview.style.width = "200px";
+        preview.id = i;
+        preview.addEventListener("click", function() {popCollection(this.id)});
+        button.className = "feed-button";
+        button.innerHTML = "pick";
+        button.id = i;
+        button.addEventListener("click", function() {pickCollection(this.id)});
+
+        container.appendChild(name);
+        container.appendChild(preview);
+        container.appendChild(button);
+        $(".feed-collections").append(container);
+    }
 }
 
 function loadMyPage() {
@@ -148,16 +189,36 @@ function showCollections() {
 function popDesign(id) {
     Swal.fire({
         title: users[id-1],
-        text: "",
+        text: "Picks: " + picksNumber[id],
         confirmButtonText: "Close",
         imageUrl: "./database/" + id + ".jpg",
         imageWidth: 400,
         imageHeight: 400,
-        imageAlt: 'Design ' + id,
-        html: "<p>Comments:</br> ... </br></p>"
+        imageAlt: "Design " + id
+      })
+}
+
+function popCollection(id) {
+    var imgs = "";
+
+    for(var i = 0; i < collections[id].length; i++)
+        imgs = imgs + `<img src='./database/${collections[id][i]}.jpg' height=200 width=200>`;
+
+    Swal.fire({
+        title: `Collection ${id}`,
+        html: imgs,
+        confirmButtonText: "Close",
       })
 }
 
 function pickDesign(id) {
     console.log("PICK DESIGN WITH ID: " + id);
+
+    // TODO
+}
+
+function pickCollection(id) {
+    console.log("PICK COLLECTION WITH ID: " + id);
+
+    // TODO
 }
