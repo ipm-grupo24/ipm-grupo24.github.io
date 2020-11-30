@@ -302,6 +302,19 @@ main {
     }
 
     .area-post {
+        position: relative;
+        i {
+            font-size: 45px;
+            position: absolute;
+            color: #CC4B4B;
+            right: 240px;
+            text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+        }
 
         &:not(:last-child) {
             padding-bottom: 25px;
