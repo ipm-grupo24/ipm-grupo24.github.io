@@ -1,8 +1,17 @@
-$(document).ready(function(){
-    console.log("got it here");
-});
+function uploadPic() {
+    $(".upload-button").hide();
+    $("#uploaded").show();
+}
 
-function showSubmission() {
-    $("#user-submission").show();
-    $("#upload-button").hide();
+function submitDesign() {
+    sessionStorage.setItem("uploaded", true);
+    Swal.fire({
+        position: 'bottom-end',
+        icon: 'success',
+        title: 'Your design has been submited',
+        showConfirmButton: false,
+        timer: 1500
+      }).then(function() {
+          goToUserArea();
+      });
 }
