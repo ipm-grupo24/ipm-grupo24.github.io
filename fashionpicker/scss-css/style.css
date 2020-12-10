@@ -374,6 +374,10 @@ main .feed-post {
 main .feed-post > p {
   font-size: 30px;
   margin-bottom: 15px;
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
 }
 
 main .feed-post button {
@@ -395,11 +399,13 @@ main .feed-post button {
   bottom: 10px;
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
+  margin-bottom: 40px;
 }
 
 main .feed-post img {
   width: 435px !important;
   height: 435px !important;
+  margin-bottom: 40px !important;
 }
 
 main .user-designs {

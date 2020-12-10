@@ -384,6 +384,10 @@ main {
         &>p {
             font-size: 30px;
             margin-bottom: 15px;
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            right: 0;
         }
 
         button {
@@ -404,11 +408,14 @@ main {
                 right: 0;
                 bottom: 10px;
                 filter: grayscale(1);
+                margin-bottom: 40px;
+                
         }
 
        img {
            width: 435px !important;
            height: 435px !important;
+           margin-bottom:40px !important;
        } 
     }
 
