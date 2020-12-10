@@ -1,7 +1,10 @@
 $(document).ready(function(){
-    loadDesignsTab();
-    loadTopPicksTab();
-    loadCollectionsTab();
+    var picks = JSON.parse(sessionStorage.getItem("designPicks"));
+    var picksCollections = JSON.parse(sessionStorage.getItem("collectionsPicks"));
+    
+    loadDesignsTab(picks);
+    loadTopPicksTab(picks);
+    loadCollectionsTab(picksCollections);
 
     var btn = $("#button");
 
@@ -16,7 +19,7 @@ $(document).ready(function(){
         });
     });
 
-function loadDesignsTab() {
+function loadDesignsTab(picks) {
     for(var counter = 1; counter <= 88; counter++) {   
         var container = document.createElement("div");
         var username = document.createElement("p");
@@ -35,7 +38,8 @@ function loadDesignsTab() {
         button.className = "feed-button";
         button.innerHTML = "pick";
         button.id = "designs" + counter;
-        button.addEventListener("click", function() {pickDesign(this.id)});
+        if(picks.includes(counter.toString())) button.className = "picked";
+        button.addEventListener("click", function() {pickDesign(this, this.id)});
 
         container.appendChild(username);
         container.appendChild(picture);
@@ -44,7 +48,7 @@ function loadDesignsTab() {
     }
 }
 
-function loadTopPicksTab() {
+function loadTopPicksTab(picks) {
     var top = [43, 64, 70, 13, 32, 57, 72, 8, 1, 58];
 
     for(var i = 0; i < 10; i++) {
@@ -67,7 +71,8 @@ function loadTopPicksTab() {
         button.className = "feed-button";
         button.innerHTML = "pick";
         button.id = "designs" + top[i];
-        button.addEventListener("click", function() {pickDesign(this.id)});
+        if(picks.includes(top[i].toString())) button.className = "picked";
+        button.addEventListener("click", function() {pickDesign(this, this.id)});
 
         container.appendChild(rank);
         container.appendChild(username);
@@ -77,7 +82,7 @@ function loadTopPicksTab() {
     }
 }
 
-function loadCollectionsTab() {
+function loadCollectionsTab(picksCollections) {
     for(var i = 0; i < collections.length; i++) {
         var container = document.createElement("div");
         var name = document.createElement("p");
@@ -96,7 +101,8 @@ function loadCollectionsTab() {
         button.className = "feed-button";
         button.innerHTML = "pick";
         button.id = "collections" + i;
-        button.addEventListener("click", function() {pickCollection(this.id)});
+        if(picksCollections.includes(i.toString())) button.className = "picked";
+        button.addEventListener("click", function() {pickCollection(this, this.id)});
 
         container.appendChild(name);
         container.appendChild(preview);
@@ -143,7 +149,7 @@ function showCollections() {
     $("#collections").addClass("active-tab");
 }
 
-function pickDesign(id) {
+function pickDesign(btn, id) {
     var i = id.substring(7);
     var picks = JSON.parse(sessionStorage.getItem("designPicks"));
 
@@ -151,6 +157,7 @@ function pickDesign(id) {
         picks.push(i);
         picks.sort();
         sessionStorage.setItem("designPicks", JSON.stringify(picks));
+        btn.className = "picked";
         Swal.fire({
             position: 'bottom-end',
             icon: 'success',
@@ -167,7 +174,7 @@ function pickDesign(id) {
     })
 }
 
-function pickCollection(id) {
+function pickCollection(btn, id) {
     var i = id.substring(11);
     var picks = JSON.parse(sessionStorage.getItem("collectionsPicks"));
 
@@ -175,6 +182,7 @@ function pickCollection(id) {
         picks.push(i);
         picks.sort();
         sessionStorage.setItem("collectionsPicks", JSON.stringify(picks));
+        btn.className = "picked";
         Swal.fire({
             position: 'bottom-end',
             icon: 'success',
