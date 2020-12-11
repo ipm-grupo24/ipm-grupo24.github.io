@@ -30,12 +30,6 @@
         <main>
             <h4>Create a new collection</h4>
 
-            <div class="user-picks">
-                <!-- TODO: Adicionar aqui as picks do user -->
-            </div>
-
-            <!-- TODO: Divisão vertical do ecrã -->
-
             <div>
                 <div class="instructions">
                     <p> Drag your picks here to create a collection </p>
@@ -52,12 +46,10 @@
                         <input type="text" id="cname" name="cname" placeholder="Name your collection...">
                     </div>
 
-                    <div class="possible-design-list">
-
+                    <div id="user-picks" class="possible-design-list" ondrop="dropUnchoose(event)" ondragover="allowDrop(event)">
                     </div>
 
-                    <div class="chosen-design-list">
-                    
+                    <div id="user-choosen" class="chosen-design-list" ondrop="dropChoose(event)" ondragover="allowDrop(event)">
                     </div>
 
 
@@ -65,13 +57,13 @@
             </div>
 
                 <div class="next-button">
-                    <div class="end-button">
+                    <div class="end-button" onclick="submitCollection()">
                         <a>Submit</a>
                     </div>
                 </div>
 
                 <div class="control-buttons">
-                    <div class="back-button">
+                    <div class="back-button" onclick="goToUserArea()">
                         <a>Cancel</a>
                     </div>
             </div>
