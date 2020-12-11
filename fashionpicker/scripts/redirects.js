@@ -13,3 +13,7 @@ function goToUserArea() {
 function goToNewDesign() {
     window.location = "./new-design.html";
 }
+
+function goToNewCollection() {
+    window.location = "./new-collection.html";
+}

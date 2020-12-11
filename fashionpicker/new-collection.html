@@ -1,80 +1,84 @@
-<head>
-    <meta http-equiv="content-type"
-       content="application/xhtml+xml; charset=UTF-8" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
-    </style>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Enriqueta:wght@400;700&display=swap');
-    </style>
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!DOCTYPE html>
+    <head>
+        <meta http-equiv="content-type"
+        content="application/xhtml+xml; charset=UTF-8" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+        </style>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Enriqueta:wght@400;700&display=swap');
+        </style>
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="scss-css/style.css">
-    <link rel="stylesheet" type="text/css" href="scripts/goUpButton.css">
-    
-</head>
-
-<body>
-    <header>
-        <div class="title">
-            <h2>Fashion Picker</h2>
-        </div>
-    </header>
-
-    <main>
-        <h4>Create a new collection</h4>
-
-        <div class="user-picks">
-            <!-- TODO: Adicionar aqui as picks do user -->
-        </div>
-
-        <!-- TODO: Divisão vertical do ecrã -->
-
-        <div>
-            <div class="instructions">
-                <p> Drag your picks here to create a collection </p>
-            </div>
-
-            <div class="user-drags">
-                
-                
-                <div class="picking-title">
-                    <p>My picks</p>
-                </div>
-
-                <div class="name-input">
-                    <input type="text" id="cname" name="cname" placeholder="Name your collection...">
-                </div>
-
-                <div class="possible-design-list">
-
-                </div>
-
-                <div class="chosen-design-list">
-                
-                </div>
-
-
-            </div>
-        </div>
-
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="scss-css/style.css">
+        <link rel="stylesheet" type="text/css" href="scripts/goUpButton.css">
         
+    </head>
 
-            <div class="next-button">
-                <div class="end-button">
-                    <a>Submit</a>
+    <body>
+        <header>
+            <div class="title">
+                <h2>Fashion Picker</h2>
+            </div>
+        </header>
+
+        <main>
+            <h4>Create a new collection</h4>
+
+            <div class="user-picks">
+                <!-- TODO: Adicionar aqui as picks do user -->
+            </div>
+
+            <!-- TODO: Divisão vertical do ecrã -->
+
+            <div>
+                <div class="instructions">
+                    <p> Drag your picks here to create a collection </p>
+                </div>
+
+                <div class="user-drags">
+                    
+                    
+                    <div class="picking-title">
+                        <p>My picks</p>
+                    </div>
+
+                    <div class="name-input">
+                        <input type="text" id="cname" name="cname" placeholder="Name your collection...">
+                    </div>
+
+                    <div class="possible-design-list">
+
+                    </div>
+
+                    <div class="chosen-design-list">
+                    
+                    </div>
+
+
                 </div>
             </div>
 
-            <div class="control-buttons">
-                <div class="back-button">
-                    <a>Cancel</a>
+                <div class="next-button">
+                    <div class="end-button">
+                        <a>Submit</a>
+                    </div>
                 </div>
-        </div>
-    </main>
-</body>
+
+                <div class="control-buttons">
+                    <div class="back-button">
+                        <a>Cancel</a>
+                    </div>
+            </div>
+        </main>
+
+        <script type="text/javascript" src="scripts/new-collection.js"></script>
+        <script type="text/javascript" src="scripts/redirects.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    </body>
+</html>

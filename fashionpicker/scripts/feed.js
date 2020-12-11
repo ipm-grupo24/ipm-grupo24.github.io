@@ -20,6 +20,38 @@ $(document).ready(function(){
     });
 
 function loadDesignsTab(picks) {
+    if(JSON.parse(sessionStorage.getItem("uploaded")) === true) {
+        var container = document.createElement("div");
+        var username = document.createElement("p");
+        var picture = document.createElement("img");
+        var button = document.createElement("button");
+
+        container.className = "feed-post";
+        username.className = "feed-username";
+        username.innerHTML = sessionStorage.getItem("username");
+        picture.className = "image-feed";
+        picture.src = "./database/" + 89 + ".jpg";
+        picture.style.height = "200px";
+        picture.style.width = "200px";
+        picture.id = 89;
+        picture.addEventListener("click", function() {popOwnDesign()});
+        button.className = "picked";
+        button.innerHTML = "pick";
+        button.id = "designs" + 89;
+        button.addEventListener("click", function() {
+            Swal.fire({
+                icon: 'error',
+               title: 'Oops...',
+               text: "Can't pick your own design!",
+           })
+        });
+
+        container.appendChild(username);
+        container.appendChild(picture);
+        container.appendChild(button);
+        $(".feed-designs").append(container);
+    }
+
     for(var counter = 1; counter <= 88; counter++) {   
         var container = document.createElement("div");
         var username = document.createElement("p");
@@ -170,7 +202,7 @@ function pickDesign(btn, id) {
          icon: 'error',
         title: 'Oops...',
         text: 'This design is already in your list!',
-        footer: '<a href="./user-area.html">Take me to my list</a>'
+        footer: '<a href="./user-area.html">Go to my page</a>'
     })
 }
 

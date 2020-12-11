@@ -60,8 +60,20 @@ function popCollection(id) {
         imgs = imgs + `<img src='./database/${collections[id][i]}.jpg' height=200 width=200>`;
 
     Swal.fire({
-        title: `Collection ${id}`,
+        title: `Collection ${parseInt(id)+1}`,
         html: imgs,
         confirmButtonText: "Close",
+      })
+}
+
+function popOwnDesign() {
+    Swal.fire({
+        title: sessionStorage.getItem("username"),
+        text: "Picks: " + 0,
+        confirmButtonText: "Close",
+        imageUrl: "./database/" + 89 + ".jpg",
+        imageWidth: 400,
+        imageHeight: 400,
+        imageAlt: "Design " + 89
       })
 }
