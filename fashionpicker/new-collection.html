@@ -14,9 +14,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="header.css">
-    <link rel="stylesheet" type="text/css" href="footer.css">
-    <link rel="stylesheet" type="text/css" href="modals.css">
+    <link rel="stylesheet" type="text/css" href="scss-css/style.css">
+    <link rel="stylesheet" type="text/css" href="scripts/goUpButton.css">
+    
 </head>
 
 <body>
@@ -36,27 +36,45 @@
         <!-- TODO: Divisão vertical do ecrã -->
 
         <div>
-            <div class="name-input">
-                <label for="cname">Name:</label>
-                <input type="text" id="cname" name="cname" placeholder="Collection name">
+            <div class="instructions">
+                <p> Drag your picks here to create a collection </p>
             </div>
 
             <div class="user-drags">
-                <p> Drag your picks here to create a collection </p>
-                <!-- TODO: Deixar user dar drag (ou selecionar se for mais facil) de designs para aqui -->
+                
+                
+                <div class="picking-title">
+                    <p>My picks</p>
+                </div>
+
+                <div class="name-input">
+                    <input type="text" id="cname" name="cname" placeholder="Name your collection...">
+                </div>
+
+                <div class="possible-design-list">
+
+                </div>
+
+                <div class="chosen-design-list">
+                
+                </div>
+
+
             </div>
         </div>
 
-        <div class="control-buttons">
-            <div class="cancel-button">
-                <a>Cancel</a>
-            </div>
+        
 
             <div class="next-button">
-                <div class="next-button">
+                <div class="end-button">
                     <a>Submit</a>
                 </div>
             </div>
+
+            <div class="control-buttons">
+                <div class="back-button">
+                    <a>Cancel</a>
+                </div>
         </div>
     </main>
 </body>

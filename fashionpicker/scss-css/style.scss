@@ -218,6 +218,91 @@ main {
         color:#E98FAF;
     }
 
+    .instructions {
+        margin-bottom: 30px;    
+    }
+
+    .user-drags {
+        .picking-title {
+            border-right: 2px #47525E solid;
+            border-bottom: 2px #47525E solid;
+            height: 45px;
+
+            color: #47525E;
+            font-family: 'Lato';
+            font-size: 26px;
+            line-height: 33px;
+            font-weight: bold;
+        }
+
+        .name-input {
+            height: 45px;
+            border-bottom: 2px #47525E solid;
+            margin-bottom: 0px; 
+
+            input {
+                width: 85%;
+                padding-left: 20px;            
+            }
+        }
+
+        .possible-design-list {
+            min-height: 200px;
+            border-right: 2px #47525E solid;
+        }
+
+        .chosen-design-list {
+            min-height: 200px;
+        }
+    }
+
+    .end-button {
+        background-color: #E98FAF;
+        border-radius: 5px;
+        width: 150px;
+        height: 47px;
+        margin: 0 auto;
+        margin-top: 25px;
+        margin-bottom: 30px;
+
+        a {
+            color: #FFFFFF;
+            font-family: Lato;
+            font-size: 22px !important;
+            line-height: 47px;
+            width: 180px;
+            text-align: center;
+        }
+    }
+
+    .back-button {
+        background-color: #969FAA;
+        border-radius: 5px;
+        width: 150px;
+        height: 47px;
+        margin: 0 auto;
+        margin-top: 25px;
+        margin-bottom: 30px;
+
+        a {
+            color: #FFFFFF;
+            font-family: Lato;
+            font-size: 22px !important;
+            line-height: 47px;
+            width: 180px;
+            text-align: center;
+        }
+    }
+
+    .user-drags {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .name-input {
+            margin-top: 0;
+        }
+    }
+
     .control-buttons {
         .cancel-button {
             a {
