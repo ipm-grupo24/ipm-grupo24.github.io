@@ -263,7 +263,7 @@ main .end-button {
 }
 
 main .end-button a {
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   font-family: Lato;
   font-size: 22px !important;
   line-height: 47px;
@@ -283,7 +283,7 @@ main .back-button {
 }
 
 main .back-button a {
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   font-family: Lato;
   font-size: 22px !important;
   line-height: 47px;
