@@ -521,6 +521,10 @@ main .feed-post img {
   margin-bottom: 40px !important;
 }
 
+main .feed-post:last-child p {
+  bottom: -10px !important;
+}
+
 main .user-designs {
   background: #E98FAF;
   width: -webkit-fit-content;
