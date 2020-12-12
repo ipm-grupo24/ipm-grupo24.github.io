@@ -222,10 +222,11 @@ function pickCollection(btn, id) {
             showConfirmButton: false,
             timer: 1500
         });
-    } else Swal.fire({
+    } else
+        Swal.fire({
         icon: 'error',
         title: 'Oops...',
         text: 'This collection is already in your list!',
         footer: '<a href="./user-area.html">Go to my page</a>'
-    })
+        })
 }

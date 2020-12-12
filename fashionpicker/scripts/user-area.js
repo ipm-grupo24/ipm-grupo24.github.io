@@ -87,6 +87,33 @@ function showCollections() {
     $(".my-created-collections").addClass("active-user-tab");
     $("#user-list-collections").hide();
     $(".my-collection-picks").removeClass("active-user-tab");
+    $("#user-list-collections").html("");
+
+    var l = JSON.parse(sessionStorage.getItem("userCollections"));
+    var ln = JSON.parse(sessionStorage.getItem("userCollectionsNames"));
+
+    if(ln.length > 0) {
+        for(var i = 0; i < l.length; i++) {
+            var container = document.createElement("div");
+            var name = document.createElement("p");
+            var preview = document.createElement("img");
+    
+            container.className = "feed-post";
+            name.className = "feed-username";
+            name.innerHTML = ln[i];
+            preview.className = "image-feed";
+            preview.src = "./database/" + l[i][0] + ".jpg";
+            preview.style.height = "200px";
+            preview.style.width = "200px";
+            preview.id = i;
+            preview.addEventListener("click", function() {popOwnCollection(this.id)});
+    
+            container.appendChild(name);
+            container.appendChild(preview);
+            $("#user-list-collections").append(container);
+        }
+        $("#user-list-collections").show();
+    } else $("#collections-empty").show();
 }
 
 function showCollectionPicks() {

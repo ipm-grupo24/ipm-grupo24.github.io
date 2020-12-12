@@ -77,3 +77,19 @@ function popOwnDesign() {
         imageAlt: "Design " + 89
       })
 }
+
+function popOwnCollection(id) {
+    var l = JSON.parse(sessionStorage.getItem("userCollections"));
+    var ln = JSON.parse(sessionStorage.getItem("userCollectionsNames"));
+
+    var imgs = "";
+
+    for(var i = 0; i < l.length; i++)
+        imgs = imgs + `<img src='./database/${l[id][i]}.jpg' height=200 width=200>`;
+
+    Swal.fire({
+        title: ln[id],
+        html: imgs,
+        confirmButtonText: "Close",
+      })
+}

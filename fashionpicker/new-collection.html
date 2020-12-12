@@ -31,10 +31,6 @@
             <h4>Create a new collection</h4>
 
             <div>
-                <div class="instructions">
-                    <p> Drag your picks here to create a collection </p>
-                </div>
-
                 <div class="user-drags">
                     
                     
@@ -50,6 +46,9 @@
                     </div>
 
                     <div id="user-choosen" class="chosen-design-list" ondrop="dropChoose(event)" ondragover="allowDrop(event)">
+                        <div id="instructions" class="instructions">
+                            <p> Drag your picks here to create a collection </p>
+                        </div>
                     </div>
 
 
@@ -70,6 +69,7 @@
         </main>
 
         <script type="text/javascript" src="scripts/new-collection.js"></script>
+        <script type="text/javascript" src="scripts/database.js"></script>
         <script type="text/javascript" src="scripts/redirects.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     </body>

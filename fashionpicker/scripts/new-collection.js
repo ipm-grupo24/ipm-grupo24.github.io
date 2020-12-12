@@ -66,14 +66,36 @@ function dropUnchoose(e) {
 
 function submitCollection() {
     sessionStorage.setItem("uploadedCollection", true);
-    
-    Swal.fire({
-        position: 'bottom-end',
-        icon: 'success',
-        title: 'Your collection has been submited',
-        showConfirmButton: false,
-        timer: 1500
-      }).then(function() {
-          goToUserArea();
-      });
+
+    if(choosen.length == 0) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'You need to pick atleast one design before submiting your new collection!',
+            })
+    } else if($("#cname").val() == "") {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'You need to name your new collection!',
+            })
+    } else {
+        var l = JSON.parse(sessionStorage.getItem("userCollections"));
+        l.push(choosen);
+        sessionStorage.setItem("userCollections", JSON.stringify(l));
+
+        var ls = JSON.parse(sessionStorage.getItem("userCollectionsNames"));
+        ls.push($("#cname").val());
+        sessionStorage.setItem("userCollectionsNames", JSON.stringify(ls));
+
+        Swal.fire({
+            position: 'bottom-end',
+            icon: 'success',
+            title: 'Your collection has been submited',
+            showConfirmButton: false,
+            timer: 1500
+          }).then(function() {
+              goToUserArea();
+          });
+    }
 }

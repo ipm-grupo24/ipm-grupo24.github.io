@@ -31,6 +31,8 @@ function doLogin(event, e, p) {
     sessionStorage.setItem("collectionsPicks", JSON.stringify([]));
     sessionStorage.setItem("uploaded", false);
     sessionStorage.setItem("uploadedCollection", false);
+    sessionStorage.setItem("userCollections", JSON.stringify([]));
+    sessionStorage.setItem("userCollectionsNames", JSON.stringify([]));
 
     $("#login").hide();
     goToFeed();
