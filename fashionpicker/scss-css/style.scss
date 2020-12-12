@@ -429,6 +429,22 @@ main {
         }
     }
 
+    .feed-post {
+        &:first-child {
+            padding-top: 15px;
+            border-top: 3px solid;
+        }
+
+        &:not(:last-child) {
+            width: fit-content;
+            margin: 0 auto;
+
+            padding-bottom: 20px;
+            border-bottom: 3px solid;
+            margin-bottom: 20px;
+        } 
+    }  
+
     .feed-topPicks {
         margin-top: -10px;
         .feed-post {
@@ -441,6 +457,8 @@ main {
             } 
         }  
     }
+
+    
 
     .feed-designs,
     .feed-collections {

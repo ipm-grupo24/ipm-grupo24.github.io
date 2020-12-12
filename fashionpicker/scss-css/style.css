@@ -419,6 +419,21 @@ main .area-post button {
   margin-top: 40px;
 }
 
+main .feed-post:first-child {
+  padding-top: 15px;
+  border-top: 3px solid;
+}
+
+main .feed-post:not(:last-child) {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  border-bottom: 3px solid;
+  margin-bottom: 20px;
+}
+
 main .feed-topPicks {
   margin-top: -10px;
 }
