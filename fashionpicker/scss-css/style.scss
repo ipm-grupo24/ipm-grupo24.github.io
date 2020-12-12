@@ -265,6 +265,7 @@ main {
         margin-top: 25px;
         margin-bottom: 30px;
         cursor: pointer;
+        padding-top: 0px !important;
 
         a {
             color: #FFFFFF !important;
@@ -273,6 +274,7 @@ main {
             line-height: 47px;
             width: 180px;
             text-align: center;
+            padding-top: 0px !important;
         }
     }
 
@@ -282,7 +284,7 @@ main {
         width: 150px;
         height: 47px;
         margin: 0 auto;
-        margin-top: 25px;
+        margin-top: 70px;
         margin-bottom: 30px;
         cursor: pointer;
 
@@ -306,31 +308,40 @@ main {
     }
 
     .control-buttons {
+        width: 400px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 30px;
+
         .cancel-button {
+            
             a {
-                background-color: #CC4B4B;
+                background-color: #969FAA;
                 border-radius: 5px;
-                width: 113px;
-                height: 37px;
+                cursor: pointer;
+                width: 150px;
+                height: 47px;
                 border-color: transparent;
-                font-size: 21px;
+                font-size: 22px;
                 color: white;
                 margin-bottom: 15px;
                 display: block;
                 margin-right: 20px;
                 margin: 0 auto;
-                margin-top:40px;
+                margin-top: 70px;
+                padding-top: 5px
             }
         }
 
         .next-button {
-            margin-top: -15px;
+            margin-top: 30px;
             a {
                 background-color: #E98FAF;
-               
+                cursor: pointer;
                 border-radius: 5px;
-                width: 113px;
-                height: 37px;
+                width: 150px;
+                height: 47px;
                 border-color: transparent;
                 font-size: 21px;
                 color: white;
@@ -339,6 +350,7 @@ main {
                 margin-right: 20px;
                 margin: 0 auto;
                 margin-top:40px;  
+                padding-top: 5px;
             }
         }
     }
@@ -430,10 +442,10 @@ main {
     }
 
     .feed-post {
-        &:first-child {
-            padding-top: 15px;
-            border-top: 3px solid;
-        }
+        // &:first-child {
+        //     padding-top: 15px;
+        //     border-top: 3px solid;
+        // }
 
         &:not(:last-child) {
             width: fit-content;
